@@ -25,7 +25,7 @@ int main() {
         cin >> parells[i].criatura >> parells[i].joguina;
     }
 
-    // Ordenem els parells segons les regles donades
+    // Ordenem els parells
     sort(parells.begin(), parells.end(), comp);
 
     // Inicialitzem les variables per mantenir el seguiment del parell actual i del nombre d'aparicions
@@ -37,9 +37,10 @@ int main() {
         if (parells[i].criatura == parellActual.criatura && parells[i].joguina == parellActual.joguina) {
             aparicions++; // Si trobem el mateix parell, incrementem el nombre d'aparicions
         } else {
-            // Si trobem un parell diferent, imprimim el nombre d'aparicions del parell anterior
+            // Si trobem un parell diferent, imprimim el nombre d'aparicions 
             cout << parellActual.criatura << " " << parellActual.joguina << " " << aparicions << endl;
-            // Actualitzem el parell actual i reiniciem el comptador d'aparicions
+            
+            // Actualitzem el parell actual i reiniciem el comptador
             parellActual = parells[i];
             aparicions = 1;
         }
